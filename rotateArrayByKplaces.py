@@ -5,7 +5,8 @@ k = 3
 
 def rotateArrayByKPlace(arr,k):
     length = len(arr)
-    arr[:] = arr[length-k:] + arr[:k+length]
+    k%=length
+    arr[:] = arr[length-k:] + arr[:length-k]
 
 result = rotateArrayByKPlace(arr, k)
-print(arr)
+print("Final Result Array : ",arr)
